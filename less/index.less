@@ -1,0 +1,136 @@
+/*Clear*/
+@import "clear";
+@xs-vvmin:50px;
+@xs-vmin: 320px;
+@xs-min: 480px;
+@sm-min: 768px;
+@md-min: 992px;
+@lg-min: 1200px;
+
+@xs-vvmax: (@xs-vmin - 1);
+@xs-vmax: (@xs-min - 1);
+@xs-max: (@sm-min - 1);
+@sm-max: (@md-min - 1);
+@md-max: (@lg-min - 1);
+
+
+/*@vsmphone:        ~"only screen and (min-width: @{xs-vvmin})";*/
+@vsmphone:        ~"only screen and (min-width: @{xs-vvmin}) and (max-width: @{xs-vvmax})";
+@smphone:        ~"only screen and (min-width: @{xs-vmin}) and (max-width: @{xs-vmax})";
+@phone-strict:   ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
+@tablet-strict:  ~"only screen and (min-width: @{sm-min}) and (max-width: @{sm-max})";
+@desktop-strict: ~"only screen and (min-width: @{md-min}) and (max-width: @{md-max})";
+@large:          ~"only screen and (min-width: @{lg-min})";
+
+.user-page{
+	@media @large { 
+		.top_bar {
+	        background-color: #2c343b;
+	        font-family: ProximaNovaRegular;
+	        padding: 10px 2px 0px 2px;
+	    }
+	    .imgSection {
+	        width: 20%;
+	        display: inline-block;
+	        text-align: center
+	    }
+	    .logo {
+	        
+	        margin: auto;
+	        width: 70%
+	    
+	    }
+	    .toggle_button{
+	    	display: none;
+	    }
+	    .searchSection {
+	        width: 50%;
+	        display: inline-block;
+	        text-align: center;
+	        position: relative;
+	        top:-35px;
+	    }
+	    .query {
+	        height: 40px;
+	        border-radius: 6px;
+	        font-size: 18px;
+	        width: 48%;
+	        padding-left:10px;
+	    }
+	    .location {
+	        height: 40px;
+	        border-radius: 6px;
+	        font-size: 18px;
+	        background: url(/website/images/toolbar_find.png) no-repeat 100% 6px;
+	        background-color: #fff;
+	        width: 48%;
+	        padding-left:10px;
+	    }
+	    .authSection {
+	        width: 29%;
+	        display: inline-block;
+	        text-align: center;
+	        position: relative;
+	        top:-35px;
+	    }
+	    .login {
+	        background-color: #E94643;
+	        color: #fff;
+	        padding-left: 15px;
+	        padding-right: 15px;
+	        padding-top: 5px;
+	        padding-bottom: 5px;
+	        border-style: solid;
+	        border-color: #E94643;
+	        font-size: 15px;
+	        border-radius: 2px;
+	        
+	    }
+	    .signup {
+	        background-color: #E94643;
+	        color: #fff;
+	        padding-top: 5px;
+	        padding-bottom: 5px;
+	        border-style: solid;
+	        border-color: #E94643;
+	        margin-left: 30px;
+	        font-size: 15px;
+	        border-radius: 2px;
+	        padding-left: 15px;
+	        padding-right: 15px
+	    }
+	    .fullSearch, .searchSectionToggle{
+	    	display: none;
+	    }
+	    .sideMenu{
+	    	display: none;
+	    }
+    
+	}
+
+
+	@media @desktop-strict{ 
+		@import "desktop-strict";
+	}
+	@media @tablet-strict {
+		@import "tablet-strict";
+	}
+	@media @phone-strict {
+		@import "phone-strict";
+	}
+	@media @smphone {
+		@import "smphone";
+	}
+
+	@media @vsmphone {
+		@import "vsmphone";	
+	}
+}
+
+
+
+/*Modal styles*/
+
+
+
+

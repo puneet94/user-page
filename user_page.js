@@ -1,0 +1,33 @@
+(function(){
+    $(document).ready(function(){
+        $('.toggle_button').on('click',function(){
+        	$('.sideMenu').animate({'right':'0%'},function(){
+        		$('.sideMenuHideArea').css('background','rgba(0,0,0,0.7)');		
+        	});
+        	$('.sideMenu').data('shown','1');
+        });
+        $('.sideMenuHideArea').on('click',function(){
+        	$('.sideMenuHideArea').css('background','transparent');	
+        	$('.sideMenu').animate({'right':'100%'});
+        	$('.sideMenu').data('shown','0');
+        });
+        $(".searchInputToggle").focus(function(){
+    		$(".fullSearch").fadeIn();
+		});
+		$('body').on('click','.searchSectionCloseButton',function(){
+			$(".fullSearch").fadeOut();
+		});
+        $(".categoriesLink").click(function(){
+            $(".inputPopUp").fadeIn();
+        });
+        $(".locationsLink").click(function(){
+            $(".locationPopUp").fadeIn();
+        });
+        $(".inputPopUpClose").click(function(){
+            $(".inputPopUp").fadeOut();
+        });
+        $(".locationPopUpClose").click(function(){
+            $(".locationPopUp").fadeOut();
+        });
+    });
+})();
