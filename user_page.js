@@ -14,6 +14,7 @@
         });
         $(".searchInputToggle").click(function(){
     		$(".fullSearch").fadeIn();
+            $(".searchSectionLocationInput").focus();
             $(".fullSearch").height($('body').height());
 		});
 		$('body').on('click','.searchSectionCloseButton',function(){
