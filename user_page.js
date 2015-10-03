@@ -1,6 +1,7 @@
 (function(){
     $(document).ready(function(){
         $('.toggle_button').on('click',function(){
+            $('.sideMenu').height($('body').height());
         	$('.sideMenu').animate({'right':'0%'},function(){
         		$('.sideMenuHideArea').css('background','rgba(0,0,0,0.7)');		
         	});
