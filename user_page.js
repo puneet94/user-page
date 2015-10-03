@@ -12,8 +12,9 @@
         	$('.sideMenu').animate({'right':'100%'});
         	$('.sideMenu').data('shown','0');
         });
-        $(".searchInputToggle").focus(function(){
+        $(".searchInputToggle").click(function(){
     		$(".fullSearch").fadeIn();
+            $(".fullSearch").height($('body').height());
 		});
 		$('body').on('click','.searchSectionCloseButton',function(){
 			$(".fullSearch").fadeOut();
