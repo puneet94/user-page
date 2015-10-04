@@ -29,20 +29,25 @@
 
 					<!--Input box for location-->
 					<div class="searchSectionLocationDiv">
-						<input type="text" class = "searchSectionLocationInput" placeholder = "In the area..." autofocus>
+						<input type="text" class = "searchSectionLocationInput" placeholder = "In the area..." >
 					</div>
 					<!--Input box for location finish-->
 
 					<!--Input box for product/store-->
 					<div class="searchSectionInputDiv">
-						<input type="text" class = "searchSectionStoreInput" placeholder = "I am looking for..." >
+						<div class="searchSectionStoreInputDiv">
+							<input type="text" class = "searchSectionStoreInput" placeholder = "I am looking for..." >	
+						</div>
+						<div class="searchSectionSearchButton">
+							<i class="fa fa-search fa-lg"></i>
+						</div>
 					</div>
 					<!--Input box for product/store finish-->
-
+					
 					<!--Search submit button-->
-					<div class="searchSectionSubmitDiv">
+					<!--<div class="searchSectionSubmitDiv">
 						<input type="submit" class = "searchSectionSubmit" value="Search">
-					</div>
+					</div>-->
 					<!--Search submit button finish-->
 
 					<!--Links for browsing location and stores-->
@@ -71,7 +76,7 @@
 						<!--Close button-->
 						
 						<header class="locationPopUpHeader">
-							<span class="locationPopUpClose" >X</span>
+							<span class="locationPopUpClose" >Close</span>
 							<span class="selectLocationText">Select Location</span>
 							
 						</header>
@@ -127,7 +132,7 @@
 						
 						<!--Header Start-->
 						<header class="inputPopUpHeader">
-							<span class="inputPopUpClose" >X</span>
+							<span class="inputPopUpClose" >Close</span>
 							<span class="selectCategoryText">Select Category</span>
 							
 						</header>
@@ -198,15 +203,20 @@
 				</section>
 			</div>
     		<header class = "top_bar">
+    			<section class="toggle_button">
+    				     <i class="fa fa-bars fa-lg" ></i>
+    			</section>
 				<section class="imgSection">
 					<img src="images/logo.png" class= "logo">
-					<div class="toggle_button">
-					     <i class="fa fa-bars fa-lg" ></i>
-	        		</div>
+					
+	        		
 				</section>
-				<section class="searchSectionToggle" >
-					<input type="text" name="query" class="searchInputToggle" placeholder = "I am looking for..." >
+				<section class="searchSectionIconButton" >
+						<i class="fa fa-search fa-lg"></i>
 				</section>
+				
+					
+				
 				<section class="searchSection">
 					<input type="text" name="query" class = "query" placeholder = "I am looking for...">
 					<input type="text" name="location" class = "location"

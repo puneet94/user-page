@@ -1,7 +1,7 @@
 (function(){
     $(document).ready(function(){
         $('.toggle_button').on('click',function(){
-            $('.sideMenu').height($('body').height());
+            $('.sideMenu').height($(document).height());
         	$('.sideMenu').animate({'right':'0%'},function(){
         		$('.sideMenuHideArea').css('background','rgba(0,0,0,0.7)');		
         	});
@@ -12,13 +12,13 @@
         	$('.sideMenu').animate({'right':'100%'});
         	$('.sideMenu').data('shown','0');
         });
-        $(".searchInputToggle").click(function(){
+        $(".searchSectionIconButton").click(function(){
     		$(".fullSearch").fadeIn();
-            $(".searchSectionLocationInput").focus();
-            $(".fullSearch").height($('body').height());
+
+            $(".fullSearch").height($(document).height());
 		});
 		$('body').on('click','.searchSectionCloseButton',function(){
-			$(".fullSearch").fadeOut();
+			$(".fullSearch").hide();
 		});
         $(".categoriesLink").click(function(){
             $(".inputPopUp").fadeIn();
