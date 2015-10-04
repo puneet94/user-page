@@ -1,12 +1,14 @@
 /*Clear*/
 @import "clear";
-@xs-vvmin:50px;
+@xs-vvvmin:50px;
+@xs-vvmin:240px;
 @xs-vmin: 320px;
 @xs-min: 480px;
 @sm-min: 768px;
 @md-min: 992px;
 @lg-min: 1200px;
 
+@xs-vvvmax: (@xs-vvmin - 1);
 @xs-vvmax: (@xs-vmin - 1);
 @xs-vmax: (@xs-min - 1);
 @xs-max: (@sm-min - 1);
@@ -14,7 +16,8 @@
 @md-max: (@lg-min - 1);
 
 
-/*@vsmphone:        ~"only screen and (min-width: @{xs-vvmin})";*/
+
+@vvsmphone:        ~"only screen and (min-width: @{xs-vvvmin}) and (max-width: @{xs-vvvmax})";
 @vsmphone:        ~"only screen and (min-width: @{xs-vvmin}) and (max-width: @{xs-vvmax})";
 @smphone:        ~"only screen and (min-width: @{xs-vmin}) and (max-width: @{xs-vmax})";
 @phone-strict:   ~"only screen and (min-width: @{xs-min}) and (max-width: @{xs-max})";
@@ -124,6 +127,9 @@
 
 	@media @vsmphone {
 		@import "vsmphone";	
+	}
+	@media @vvsmphone {
+		@import "vvsmphone";	
 	}
 }
 
