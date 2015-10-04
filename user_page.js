@@ -13,24 +13,32 @@
         	$('.sideMenu').data('shown','0');
         });
         $(".searchSectionIconButton").click(function(){
-    		$(".fullSearch").fadeIn();
-
+    		$(".fullSearch").show();
+            $(window).scrollTop(0);
+            console.log($(".fullSearch").scrollTop());
             $(".fullSearch").height($(document).height());
 		});
 		$('body').on('click','.searchSectionCloseButton',function(){
 			$(".fullSearch").hide();
 		});
         $(".categoriesLink").click(function(){
-            $(".inputPopUp").fadeIn();
+            $(".inputPopUp").show();
+            $(window).scrollTop(0);
+            console.log($(".inputPopUp").scrollTop());
         });
         $(".locationsLink").click(function(){
-            $(".locationPopUp").fadeIn();
+            $(".locationPopUp").show();
+            $(window).scrollTop(0);
+            console.log($(".locationPopUp").scrollTop());
         });
         $(".inputPopUpClose").click(function(){
-            $(".inputPopUp").fadeOut();
+            $(".inputPopUp").hide();
         });
         $(".locationPopUpClose").click(function(){
-            $(".locationPopUp").fadeOut();
+            $(".locationPopUp").hide();
+        });
+        $(".searchSectionLocationInput, .searchSectionStoreInput").blur(function(){
+            $(window).scrollTop(0);
         });
     });
 })();
