@@ -40,5 +40,10 @@
         $(".searchSectionLocationInput, .searchSectionStoreInput").blur(function(){
             $(window).scrollTop(0);
         });
+        $(".searchSectionLocationInput, .searchSectionStoreInput").keyup(function(event){
+            if(event.keyCode == 13){
+                $(window).scrollTop(0);
+            }
+        });
     });
 })();
